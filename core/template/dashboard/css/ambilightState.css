@@ -1,0 +1,75 @@
+.hyperionNG .content {
+	background-color: unset;
+}
+
+.hyperionNG .background {
+	width: 80px;
+	height: 60px;
+	position: relative;
+	border-radius: 10%;
+	margin: 5px 5px 5px 5px;
+}
+
+.hyperionNG .background span {
+	height: 100%;
+	width: 100%;
+	background: inherit;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 10%;
+}
+
+.hyperionNG .background span:nth-child(1) {
+	filter: blur(7px);
+}
+
+.hyperionNG .background span:nth-child(2) {
+	filter: blur(14px);
+}
+
+.hyperionNG .tv {
+	width: 60px;
+	height: 40px;
+	background: var(--link-color);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-style: solid;
+	border-width: 5px;
+	border-color: rgb(0, 0, 0);
+}
+
+.hyperionNG .tv2 {
+	width: 20px;
+	height: 10px;
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-style: solid;
+	border-width: 0 5px 0 5px;
+	border-color: rgb(0, 0, 0);
+}
+
+.hyperionNG .tv3 {
+	width: 40px;
+	height: 5px;
+	background: rgb(0, 0, 0);
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@keyframes hyperionNGRotate {
+	0% {
+		filter: hue-rotate(360deg);
+	}
+
+	100% {
+		filter: hue-rotate(0deg);
+	}
+}

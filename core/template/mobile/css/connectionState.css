@@ -1,0 +1,13 @@
+.hyperionNG.connectionState {
+	margin-top: 2px;
+	position: absolute !important;
+	left: 0;
+
+	float: left;
+	padding-left: 5px;
+}
+
+.hyperionNG.connectionState i {
+	color: var(--eqTitle-color);
+	font-size: 13px;
+}

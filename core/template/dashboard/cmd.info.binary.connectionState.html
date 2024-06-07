@@ -1,0 +1,28 @@
+<div class="cmd cmd-widget #history# hyperionNG connectionState" data-type="info" data-subtype="binary"
+	data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#">
+	<link rel="stylesheet" href="plugins/hyperionNG/core/template/dashboard/css/connectionState.css">
+	<span></span>
+	<script>
+		jeedom.cmd.addUpdateFunction('#id#', function (_options) {
+			if (is_object(cmd = document.querySelector('.cmd[data-cmd_uid="#uid#"]'))) {
+				cmd.setAttribute('title', '{{Date de valeur}}: ' + _options.valueDate + '<br>{{Date de collecte}}: ' + _options.collectDate)
+				if (_options.display_value == 1) {
+					cmd.querySelector('.connectionState > span').innerHTML = "<i class='fa fa-check'></i>"
+				} else {
+					cmd.querySelector('.connectionState > span').innerHTML = "<i class='fa fa-times'></i>"
+				}
+			}
+		})
+		jeedom.cmd.refreshValue([{ cmd_id: '#id#', value: '#value#', display_value: '#state#', valueDate: '#valueDate#', collectDate: '#collectDate#', alertLevel: '#alertLevel#', unit: '#unite#' }])
+
+		var referenceNode = document.querySelector('.cmd[data-cmd_uid="#uid#"]').closest('.eqLogic-widget').querySelector('.refresh')
+		// console.log(referenceNode)
+		var node = document.querySelector('.cmd[data-cmd_uid="#uid#"]')
+		// console.log(node)
+		if (node.parentNode) {
+			var newNode = node.parentNode.removeChild(node)
+			// console.log(newNode)
+		}
+		referenceNode.parentNode.insertBefore(newNode, referenceNode)
+	</script>
+</div>
