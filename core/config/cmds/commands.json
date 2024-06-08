@@ -11,8 +11,8 @@
 		"type": "info",
 		"subType": "binary",
 		"template": {
-			"dashboard": "hyperionNG::connectionState",
-			"mobile": "hyperionNG::connectionState"
+			"dashboard": "ambilightByHyperion::connectionState",
+			"mobile": "ambilightByHyperion::connectionState"
 		}
 	},
 	{
@@ -22,8 +22,8 @@
 		"type": "info",
 		"subType": "binary",
 		"template": {
-			"dashboard": "hyperionNG::ambilightState",
-			"mobile": "hyperionNG::ambilightState"
+			"dashboard": "ambilightByHyperion::ambilightState",
+			"mobile": "ambilightByHyperion::ambilightState"
 		},
 		"display": {
 			"forceReturnLineAfter": 1,
@@ -230,8 +230,8 @@
 		"type": "action",
 		"subType": "other",
 		"template": {
-			"dashboard": "hyperionNG::checkbox",
-			"mobile": "hyperionNG::checkbox"
+			"dashboard": "ambilightByHyperion::checkbox",
+			"mobile": "ambilightByHyperion::checkbox"
 		},
 		"value": "backlightColoredState"
 	},
@@ -241,8 +241,8 @@
 		"type": "action",
 		"subType": "other",
 		"template": {
-			"dashboard": "hyperionNG::checkbox",
-			"mobile": "hyperionNG::checkbox"
+			"dashboard": "ambilightByHyperion::checkbox",
+			"mobile": "ambilightByHyperion::checkbox"
 		},
 		"value": "backlightColoredState"
 	},

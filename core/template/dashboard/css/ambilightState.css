@@ -1,8 +1,8 @@
-.hyperionNG .content {
+.ambilightByHyperion .content {
 	background-color: unset;
 }
 
-.hyperionNG .background {
+.ambilightByHyperion .background {
 	width: 80px;
 	height: 60px;
 	position: relative;
@@ -10,7 +10,7 @@
 	margin: 5px 5px 5px 5px;
 }
 
-.hyperionNG .background span {
+.ambilightByHyperion .background span {
 	height: 100%;
 	width: 100%;
 	background: inherit;
@@ -21,15 +21,15 @@
 	border-radius: 10%;
 }
 
-.hyperionNG .background span:nth-child(1) {
+.ambilightByHyperion .background span:nth-child(1) {
 	filter: blur(7px);
 }
 
-.hyperionNG .background span:nth-child(2) {
+.ambilightByHyperion .background span:nth-child(2) {
 	filter: blur(14px);
 }
 
-.hyperionNG .tv {
+.ambilightByHyperion .tv {
 	width: 60px;
 	height: 40px;
 	background: var(--link-color);
@@ -42,7 +42,7 @@
 	border-color: rgb(0, 0, 0);
 }
 
-.hyperionNG .tv2 {
+.ambilightByHyperion .tv2 {
 	width: 20px;
 	height: 10px;
 	position: absolute;
@@ -54,7 +54,7 @@
 	border-color: rgb(0, 0, 0);
 }
 
-.hyperionNG .tv3 {
+.ambilightByHyperion .tv3 {
 	width: 40px;
 	height: 5px;
 	background: rgb(0, 0, 0);
@@ -64,7 +64,7 @@
 	transform: translate(-50%, -50%);
 }
 
-@keyframes hyperionNGRotate {
+@keyframes ambilightByHyperionRotate {
 	0% {
 		filter: hue-rotate(360deg);
 	}

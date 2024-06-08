@@ -35,7 +35,7 @@ function rgb2hex($r, $g, $b)
 	return $hex;
 }
 
-class hyperionNG extends eqLogic
+class ambilightByHyperion extends eqLogic
 {
 	/*     * *************************Attributs****************************** */
 
@@ -167,7 +167,7 @@ class hyperionNG extends eqLogic
 			$cmd = $this->getCmd(null, $command['logicalId']);
 			if (!is_object($cmd)) {
 				log::add(__CLASS__, 'info', $this->getHumanName() . ' : Command [' . $command['name'] . '] created');
-				$cmd = (new hyperionNGCmd);
+				$cmd = (new ambilightByHyperionCmd);
 				$cmd->setLogicalId($command['logicalId']);
 				if (isset($command['generic_type'])) {
 					$cmd->setGeneric_type($command['generic_type']);
@@ -373,7 +373,7 @@ class hyperionNG extends eqLogic
 	/*     * **********************Getteur Setteur*************************** */
 }
 
-class hyperionNGCmd extends cmd
+class ambilightByHyperionCmd extends cmd
 {
 	/*     * *************************Attributs****************************** */
 

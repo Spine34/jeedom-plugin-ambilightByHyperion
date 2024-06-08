@@ -18,12 +18,12 @@
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
 // Fonction exécutée automatiquement après l'installation du plugin
-function hyperionNG_install()
+function ambilightByHyperion_install()
 {
-	$cron = cron::byClassAndFunction('hyperionNG', 'update');
+	$cron = cron::byClassAndFunction('ambilightByHyperion', 'update');
 	if (!is_object($cron)) {
 		$cron = new cron();
-		$cron->setClass('hyperionNG');
+		$cron->setClass('ambilightByHyperion');
 		$cron->setFunction('update');
 		$cron->setEnable(1);
 		$cron->setDeamon(0);
@@ -34,13 +34,13 @@ function hyperionNG_install()
 }
 
 // Fonction exécutée automatiquement après la mise à jour du plugin
-function hyperionNG_update()
+function ambilightByHyperion_update()
 {
-	$cron = cron::byClassAndFunction('hyperionNG', 'update');
+	$cron = cron::byClassAndFunction('ambilightByHyperion', 'update');
 	if (!is_object($cron)) {
 		$cron = new cron();
 	}
-	$cron->setClass('hyperionNG');
+	$cron->setClass('ambilightByHyperion');
 	$cron->setFunction('update');
 	$cron->setEnable(1);
 	$cron->setDeamon(0);
@@ -50,9 +50,9 @@ function hyperionNG_update()
 }
 
 // Fonction exécutée automatiquement après la suppression du plugin
-function hyperionNG_remove()
+function ambilightByHyperion_remove()
 {
-	$cron = cron::byClassAndFunction('hyperionNG', 'update');
+	$cron = cron::byClassAndFunction('ambilightByHyperion', 'update');
 	if (is_object($cron)) {
 		$cron->remove();
 	}
