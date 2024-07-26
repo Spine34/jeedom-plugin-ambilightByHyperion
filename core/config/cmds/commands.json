@@ -1,0 +1,473 @@
+[
+	{
+		"logicalId": "refresh",
+		"name": "Rafraîchir",
+		"type": "action",
+		"subType": "other"
+	},
+	{
+		"logicalId": "connectionState",
+		"name": "Etat connexion",
+		"type": "info",
+		"subType": "binary",
+		"template": {
+			"dashboard": "ambilightByHyperion::connectionState",
+			"mobile": "ambilightByHyperion::connectionState"
+		}
+	},
+	{
+		"logicalId": "ambilightState",
+		"generic_type": "LIGHT_STATE",
+		"name": "Etat Ambilight",
+		"type": "info",
+		"subType": "binary",
+		"template": {
+			"dashboard": "ambilightByHyperion::ambilightState",
+			"mobile": "ambilightByHyperion::ambilightState"
+		},
+		"display": {
+			"forceReturnLineAfter": 1,
+			"parameters": {
+				"time": "duration"
+			}
+		}
+	},
+	{
+		"logicalId": "colorState",
+		"generic_type": "LIGHT_COLOR",
+		"name": "Etat couleur",
+		"type": "info",
+		"subType": "string",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "effectState",
+		"name": "Etat effet",
+		"type": "info",
+		"subType": "string",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "brightnessState",
+		"generic_type": "LIGHT_BRIGHTNESS",
+		"name": "Etat luminosité",
+		"type": "info",
+		"subType": "numeric",
+		"unite": "%",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "backlightThresholdState",
+		"name": "Etat rétroéclairage",
+		"type": "info",
+		"subType": "numeric",
+		"unite": "%",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "durationState",
+		"name": "Etat durée",
+		"type": "info",
+		"subType": "numeric",
+		"unite": "s",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "priorityState",
+		"name": "Etat priorité",
+		"type": "info",
+		"subType": "numeric",
+		"unite": "s",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "backlightColoredState",
+		"name": "Etat rétroéclairage coloré",
+		"type": "info",
+		"subType": "binary",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "hyperionState",
+		"name": "Etat Hyperion",
+		"type": "info",
+		"subType": "binary",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "smoothingState",
+		"name": "Etat fondu",
+		"type": "info",
+		"subType": "binary",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "blackBorderState",
+		"name": "Etat détection des bordures noir",
+		"type": "info",
+		"subType": "binary",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "forwarderState",
+		"name": "Etat transfert",
+		"type": "info",
+		"subType": "binary",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "boblightServerState",
+		"name": "Etat serveur Boblight",
+		"type": "info",
+		"subType": "binary",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "grabberState",
+		"name": "Etat platforme de capture",
+		"type": "info",
+		"subType": "binary",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "v4lState",
+		"name": "Etat capture USB",
+		"type": "info",
+		"subType": "binary",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "audioState",
+		"name": "Etat capture audio",
+		"type": "info",
+		"subType": "binary",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "ledDeviceState",
+		"name": "Etat équipement LED",
+		"type": "info",
+		"subType": "binary",
+		"isVisible": 0
+	},
+	{
+		"logicalId": "color",
+		"generic_type": "LIGHT_SET_COLOR",
+		"name": "Couleur",
+		"type": "action",
+		"subType": "color",
+		"value": "colorState"
+	},
+	{
+		"logicalId": "providedEffects",
+		"name": "Effets fournis",
+		"type": "action",
+		"subType": "select",
+		"configuration": {
+			"listValue": "Atomic swirl|Atomic swirl;Blue mood blobs|Blue mood blobs;Breath|Breath;Candle|Candle;Cinema brighten lights|Cinema brighten lights;Cinema dim lights|Cinema dim lights;Cold mood blobs|Cold mood blobs;Collision|Collision;Color traces|Color traces;Double swirl|Double swirl;Fire|Fire;Flags Germany/Sweden|Flags Germany/Sweden;Full color mood blobs|Full color mood blobs;Green mood blobs|Green mood blobs;Knight rider|Knight rider;Led Test|Led Test;Light clock|Light clock;Lights|Lights;Notify blue|Notify blue;Pac-Man|Pac-Man;Plasma|Plasma;Police Lights Single|Police Lights Single;Police Lights Solid|Police Lights Solid;Rainbow mood|Rainbow mood;Rainbow swirl|Rainbow swirl;Rainbow swirl fast|Rainbow swirl fast;Random|Random;Red mood blobs|Red mood blobs;Sea waves|Sea waves;Snake|Snake;Sparks|Sparks;Strobe red|Strobe red;Strobe white|Strobe white;System Shutdown|System Shutdown;Trails|Trails;Trails color|Trails color;Warm mood blobs|Warm mood blobs;Waves with Color|Waves with Color;X-Mas|X-Mas"
+		},
+		"value": "effectState"
+	},
+	{
+		"logicalId": "userEffects",
+		"name": "Effets utilisateur",
+		"type": "action",
+		"subType": "select",
+		"value": "effectState"
+	},
+	{
+		"logicalId": "brightness",
+		"generic_type": "LIGHT_SLIDER",
+		"name": "Luminosité",
+		"type": "action",
+		"subType": "slider",
+		"template": {
+			"dashboard": "core::value",
+			"mobile": "core::value"
+		},
+		"value": "brightnessState"
+	},
+	{
+		"logicalId": "backlightThreshold",
+		"name": "Rétroéclairage",
+		"type": "action",
+		"subType": "slider",
+		"template": {
+			"dashboard": "core::value",
+			"mobile": "core::value"
+		},
+		"value": "backlightThresholdState"
+	},
+	{
+		"logicalId": "duration",
+		"name": "Durée",
+		"type": "action",
+		"subType": "slider",
+		"template": {
+			"dashboard": "core::value",
+			"mobile": "core::value"
+		},
+		"value": "durationState"
+	},
+	{
+		"logicalId": "priority",
+		"name": "Priorité",
+		"type": "action",
+		"subType": "slider",
+		"configuration": {
+			"minValue": 2,
+			"maxValue": 99
+		},
+		"template": {
+			"dashboard": "core::value",
+			"mobile": "core::value"
+		},
+		"value": "priorityState"
+	},
+	{
+		"logicalId": "backlightColoredOn",
+		"name": "Rétroéclairage coloré On",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "ambilightByHyperion::checkbox",
+			"mobile": "ambilightByHyperion::checkbox"
+		},
+		"value": "backlightColoredState"
+	},
+	{
+		"logicalId": "backlightColoredOff",
+		"name": "Rétroéclairage coloré Off",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "ambilightByHyperion::checkbox",
+			"mobile": "ambilightByHyperion::checkbox"
+		},
+		"value": "backlightColoredState"
+	},
+	{
+		"logicalId": "hyperionOn",
+		"name": "Hyperion On",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "hyperionState"
+	},
+	{
+		"logicalId": "hyperionOff",
+		"name": "Hyperion Off",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "hyperionState"
+	},
+	{
+		"logicalId": "smoothingOn",
+		"name": "Fondu On",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "smoothingState"
+	},
+	{
+		"logicalId": "smoothingOff",
+		"name": "Fondu Off",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "smoothingState"
+	},
+	{
+		"logicalId": "blackBorderOn",
+		"name": "Détection des bordures noir On",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "blackBorderState"
+	},
+	{
+		"logicalId": "blackBorderOff",
+		"name": "Détection des bordures noir Off",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "blackBorderState"
+	},
+	{
+		"logicalId": "forwarderOn",
+		"name": "Transfert On",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "forwarderState"
+	},
+	{
+		"logicalId": "forwarderOff",
+		"name": "Transfert Off",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "forwarderState"
+	},
+	{
+		"logicalId": "boblightServerOn",
+		"name": "Serveur Boblight On",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "boblightServerState"
+	},
+	{
+		"logicalId": "boblightServerOff",
+		"name": "Serveur Boblight Off",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "boblightServerState"
+	},
+	{
+		"logicalId": "grabberOn",
+		"name": "Platforme de capture On",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "grabberState"
+	},
+	{
+		"logicalId": "grabberOff",
+		"name": "Platforme de capture Off",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "grabberState"
+	},
+	{
+		"logicalId": "v4lOn",
+		"name": "Capture USB On",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "v4lState"
+	},
+	{
+		"logicalId": "v4lOff",
+		"name": "Capture USB Off",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "v4lState"
+	},
+	{
+		"logicalId": "audioOn",
+		"name": "Capture audio On",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "audioState"
+	},
+	{
+		"logicalId": "audioOff",
+		"name": "Capture audio Off",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "audioState"
+	},
+	{
+		"logicalId": "ledDeviceOn",
+		"name": "Equipement LED On",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "ledDeviceState"
+	},
+	{
+		"logicalId": "ledDeviceOff",
+		"name": "Equipement LED Off",
+		"type": "action",
+		"subType": "other",
+		"template": {
+			"dashboard": "core::binarySwitch",
+			"mobile": "core::binarySwitch"
+		},
+		"value": "ledDeviceState"
+	},
+	{
+		"logicalId": "randomColor",
+		"name": "Couleur aléatoire",
+		"type": "action",
+		"subType": "other"
+	},
+	{
+		"logicalId": "randomEffect",
+		"name": "Effet aléatoire",
+		"type": "action",
+		"subType": "other"
+	},
+	{
+		"logicalId": "ambilightOn",
+		"generic_type": "LIGHT_ON",
+		"name": "Ambilight On",
+		"type": "action",
+		"subType": "other"
+	},
+	{
+		"logicalId": "reset",
+		"generic_type": "LIGHT_OFF",
+		"name": "Remise à zéro",
+		"type": "action",
+		"subType": "other"
+	}
+]
