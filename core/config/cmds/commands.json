@@ -77,7 +77,6 @@
 		"name": "Etat priorité",
 		"type": "info",
 		"subType": "numeric",
-		"unite": "s",
 		"isVisible": 0
 	},
 	{
