@@ -1,3 +1,3 @@
 # jeedom-plugin-ambilightByHyperion
 
-Ce plugin permet de contrôler un serveur Hyperion.22
+Ce plugin permet de contrôler un serveur Hyperion.
