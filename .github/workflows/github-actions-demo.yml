@@ -1,19 +1,21 @@
+name: Pipeline Avancée
 
-name: example
 on:
-	push:
-		branches: [main]
+  push:
+    branches:
+      - main
+
 jobs:
-	build:
-		runs-on: ubuntu-latest
-		steps:
-     - name: Push generated webpage to another repository
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push generated webpage to another repository
         uses: nkoppel/push-files-to-another-repository@v1.1.3
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-files: 'docs/'
           destination-username: 'Spine34'
-          destination-repository: 'jeedom-documentations'
-          destination-directory: 'toto/'
+          destination-repository: 'jeedom-documentation'
+          destination-directory: 'projects/my-project'
           commit-email: 'nathankoppel0@gmail.com'
