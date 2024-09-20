@@ -16,6 +16,6 @@ jobs:
         with:
           source-files: 'docs/'
           destination-username: 'Spine34'
-          destination-repository: 'jeedom-documentation'
+          destination-repository: 'jeedom-documentations'
           destination-directory: 'projects/my-project'
           commit-email: 'nathankoppel0@gmail.com'
