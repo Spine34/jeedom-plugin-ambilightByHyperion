@@ -95,7 +95,7 @@
 	},
 	{
 		"logicalId": "smoothingState",
-		"name": "Etat fondu",
+		"name": "Etat lissage",
 		"type": "info",
 		"subType": "binary",
 		"isVisible": 0
@@ -269,7 +269,7 @@
 	},
 	{
 		"logicalId": "smoothingOn",
-		"name": "Fondu On",
+		"name": "Lissage On",
 		"type": "action",
 		"subType": "other",
 		"template": {
@@ -280,7 +280,7 @@
 	},
 	{
 		"logicalId": "smoothingOff",
-		"name": "Fondu Off",
+		"name": "Lissage Off",
 		"type": "action",
 		"subType": "other",
 		"template": {
