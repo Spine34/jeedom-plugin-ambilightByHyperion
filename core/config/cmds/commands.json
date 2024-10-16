@@ -465,7 +465,7 @@
 	{
 		"logicalId": "reset",
 		"generic_type": "LIGHT_OFF",
-		"name": "Remise à zéro",
+		"name": "RAZ",
 		"type": "action",
 		"subType": "other"
 	}
