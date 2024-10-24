@@ -131,19 +131,13 @@ class ambilightByHyperion extends eqLogic
 	}
 
 	// Fonction exécutée automatiquement après la création de l'équipement
-	public function postInsert()
-	{
-	}
+	public function postInsert() {}
 
 	// Fonction exécutée automatiquement avant la mise à jour de l'équipement
-	public function preUpdate()
-	{
-	}
+	public function preUpdate() {}
 
 	// Fonction exécutée automatiquement après la mise à jour de l'équipement
-	public function postUpdate()
-	{
-	}
+	public function postUpdate() {}
 
 	// Fonction exécutée automatiquement avant la sauvegarde (création ou mise à jour) de l'équipement
 	public function preSave()
@@ -159,27 +153,35 @@ class ambilightByHyperion extends eqLogic
 	// Fonction exécutée automatiquement après la sauvegarde (création ou mise à jour) de l'équipement
 	public function postSave()
 	{
-		$order = 0;
 		$commands = json_decode(file_get_contents(dirname(__FILE__) . '/../config/cmds/commands.json'), true);
-		// log::add(__CLASS__, 'debug', $this->getHumanName() . ' : $commands : ' . json_encode($commands));
+		$order = 0;
+		log::add(__CLASS__, 'debug', $this->getHumanName() . ' : $commands : ' . json_encode($commands));
 		foreach ($commands as $command) {
-			// log::add(__CLASS__, 'debug', $this->getHumanName() . ' : $command : ' . json_encode($command));
+			log::add(__CLASS__, 'debug', $this->getHumanName() . ' : $command : ' . json_encode($command));
 			$cmd = $this->getCmd(null, $command['logicalId']);
 			if (!is_object($cmd)) {
 				log::add(__CLASS__, 'info', $this->getHumanName() . ' : Command [' . $command['name'] . '] created');
-				$cmd = (new ambilightByHyperionCmd);
-				$cmd->setLogicalId($command['logicalId']);
+				$cmd = (new speedtestByOoklaCmd);
+				if (isset($command['logicalId'])) {
+					$cmd->setLogicalId($command['logicalId']);
+				}
 				if (isset($command['generic_type'])) {
 					$cmd->setGeneric_type($command['generic_type']);
 				}
-				$cmd->setName($command['name']);
+				if (isset($command['name'])) {
+					$cmd->setName($command['name']);
+				}
 				$cmd->setOrder($order++);
-				$cmd->setType($command['type']);
-				$cmd->setSubType($command['subType']);
+				if (isset($command['type'])) {
+					$cmd->setType($command['type']);
+				}
+				if (isset($command['subType'])) {
+					$cmd->setSubType($command['subType']);
+				}
 				$cmd->setEqLogic_id($this->getId());
-				// if (isset($command['isHistorized'])) {
-				// 	$cmd->setIsHistorized($command['isHistorized']);
-				// }
+				if (isset($command['isHistorized'])) {
+					$cmd->setIsHistorized($command['isHistorized']);
+				}
 				if (isset($command['unite'])) {
 					$cmd->setUnite($command['unite']);
 				}
@@ -210,14 +212,10 @@ class ambilightByHyperion extends eqLogic
 	}
 
 	// Fonction exécutée automatiquement avant la suppression de l'équipement
-	public function preRemove()
-	{
-	}
+	public function preRemove() {}
 
 	// Fonction exécutée automatiquement après la suppression de l'équipement
-	public function postRemove()
-	{
-	}
+	public function postRemove() {}
 
 	/*
 	* Permet de crypter/décrypter automatiquement des champs de configuration des équipements
