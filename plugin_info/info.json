@@ -2,11 +2,15 @@
 	"id": "ambilightByHyperion",
 	"name": "Ambilight by Hyperion",
 	"description": {
-		"fr_FR": "Ce plugin permet de contrôler un serveur Hyperion."
+		"fr_FR": "Ce plugin permet de contrôler un serveur Hyperion"
 	},
 	"licence": "AGPL",
 	"author": "Spine",
 	"require": "4.4",
+	"os": {
+		"min": 11,
+		"max": 12.99
+	},
 	"category": "multimedia",
 	"hasDependency": false,
 	"hasOwnDeamon": false,
