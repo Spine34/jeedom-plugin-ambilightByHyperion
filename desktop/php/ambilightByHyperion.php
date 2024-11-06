@@ -148,11 +148,11 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">{{Adresse IP}}
+								<label class="col-sm-4 control-label">{{Adresse IP du serveur}}
 									<sup><i class="fas fa-question-circle tooltips" title="{{Permet de choisir l'adresse IP du serveur à contôler}}"></i></sup>
 								</label>
 								<div class="col-sm-6">
-									<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ipAdress" style="margin-bottom: unset !important;">
+									<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ipAdress">
 								</div>
 							</div>
 							<div class="form-group">

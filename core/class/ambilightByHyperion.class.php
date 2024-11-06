@@ -125,8 +125,8 @@ class ambilightByHyperion extends eqLogic
 	// Fonction exécutée automatiquement avant la création de l'équipement
 	public function preInsert()
 	{
-		$this->setIsEnable(1);
 		$this->setIsVisible(1);
+		$this->setIsEnable(1);
 		$this->setCategory('light', 1);
 	}
 
@@ -134,7 +134,12 @@ class ambilightByHyperion extends eqLogic
 	public function postInsert() {}
 
 	// Fonction exécutée automatiquement avant la mise à jour de l'équipement
-	public function preUpdate() {}
+	public function preUpdate()
+	{
+		if (empty($this->getConfiguration('ip'))) {
+			throw new Exception(__('L\'adresse IP du serveur ne peut être vide', __FILE__));
+		}
+	}
 
 	// Fonction exécutée automatiquement après la mise à jour de l'équipement
 	public function postUpdate() {}
