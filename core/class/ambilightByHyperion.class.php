@@ -136,7 +136,7 @@ class ambilightByHyperion extends eqLogic
 	// Fonction exécutée automatiquement avant la mise à jour de l'équipement
 	public function preUpdate()
 	{
-		if (empty($this->getConfiguration('ip'))) {
+		if (empty($this->getConfiguration('ipAdress'))) {
 			throw new Exception(__('L\'adresse IP du serveur ne peut être vide', __FILE__));
 		}
 	}
